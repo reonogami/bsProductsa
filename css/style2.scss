@@ -1,0 +1,99 @@
+@charset "UTF-8";
+　//定義​
+
+.item-list {
+  width: 670px;
+  margin: 0 auto;
+​
+  // 大見出し
+​
+  &__heading {
+    width: 100%;
+    padding: 25px 0;
+    margin-bottom: 40px;
+    background: url("../images/left.png") 0 0 no-repeat,
+      url("../images/right.png") right 0 no-repeat, #ffeddd;
+    background-size: contain;
+    font-size: 138%;
+    color: #5e2b00;
+    font-weight: bold;
+    font-family: MS mincho;
+    text-align: center;
+    letter-spacing: 0.2em;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+​
+    &::after,
+    &::before {
+      content: "";
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: 100%;
+      border: 5px solid transparent;
+      border-top: 5px solid #5e2b00;
+    }
+​
+    &::before {
+      right: 0;
+      border-left: 5px solid #5e2b00;
+    }
+​
+    &::after {
+      left: 0;
+      border-right: 5px solid #5e2b00;
+    }
+  }
+​
+  // 商品一覧
+​
+  &__items {
+    overflow: hidden;
+    padding: 0;
+    width: 610px;
+    margin: auto;
+  }
+  &__item {
+    width: 170px;
+    float: left;
+    margin: 0 50px 20px 0;
+    list-style-type: none;
+​
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+​
+    &-img {
+      padding: 4px;
+      border: 1px solid #5e2b00;
+    }
+​
+    &-link {
+      color: #5e2b00;
+      text-decoration: none;
+​
+      &:hover {
+        color: #dd6600;
+      }
+    }
+​
+    &-name {
+      margin: 5px 0;
+      font-size: 113%;
+      color: #5e2b00;
+      font-weight: bold;
+​
+      &--eng {
+        margin: 0;
+        font-size: 75%;
+        color: #dd6600;
+        border-top: 1px dotted #5e2b00;
+      }
+    }
+​
+    &-text {
+      font-size: 88%;
+      color: #5e2b00;
+    }
+  }
+}
